@@ -18,7 +18,7 @@ JSON syntax for reference
   "_id": {
     "$oid": "69baf01cc87fd5b5646064e8"
   },
-  "firstName": "John",
+  "firstName": "John", 
   "lastName": "Doe",
   "email": "jdoe@hotmail.com",
   "age": 34,
