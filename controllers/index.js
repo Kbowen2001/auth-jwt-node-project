@@ -1,5 +1,5 @@
 
-const mongodb = require("../db/connect");
+const mongodb = require("../routes/db/connect");
 const objectId = require("mongodb").ObjectId;
 
 const awesomeFunction = (req, res) => {
@@ -12,14 +12,14 @@ const tooeleTechFunction = (req, res) => {
 
 const getAllStudents =  async (req, res) => {
   try{
-    const result = await mongodb.getDb().db().collection("students").find();
+    const result = await mongodb.getDb().collection("students").find();
     result.toArray().then((lists) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(lists);
     });
   }
    catch (err) {
-    res.status(500).json(error);
+    res.status(500).json(err);
   }
 };
 
