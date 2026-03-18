@@ -13,12 +13,13 @@ const initDb = async (callback) => {
     console.log("Db is already initialized!");
     return callback(null, _db);
   }
-    MongoClient.connect(process.env.MONGO_URI || process.env.MONGODB_URI)
+    MongoClient.connect(process.env.MONGO_URI)
     .then((client) => {
         _db = client.db();
         callback(null, _db);
     })
     .catch((err) => {
+        console.log("Something went wrong with the DB!", err);
         callback(err);
     });
 };
