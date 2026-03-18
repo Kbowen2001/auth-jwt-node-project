@@ -21,4 +21,4 @@ JSON syntax for reference
   "email": "jdoe@hotmail.com",
   "age": 34,
   "currentCollege": "Tooele Technical College"
-}
+} 
