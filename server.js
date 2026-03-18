@@ -17,7 +17,7 @@ mongodb.initDb((err) => {
       "\x1b[34m%s\x1b[0m",
       `connected to DB and listening on ${PORT} `
     );
-  }
+  } 
 }); 
 
 
