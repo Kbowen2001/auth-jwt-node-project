@@ -18,7 +18,7 @@ mongodb.initDb((err) => {
       `connected to DB and listening on ${PORT} `
     );
   }
-});
+}); 
 
 
 
