@@ -1,3 +1,5 @@
+@studentId = 69c16ec3f8876aac5effe358
+
 ### get tooele tech route
 
 GET http://localhost:3000/ttech HTTP/1.1
@@ -19,11 +21,11 @@ POST http://localhost:3000/students HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "John",
+    "firstName": "Carl",
     "lastName": "Doe",
-    "email": "john.doe@example.com",
+    "email": "Carl.doe@example.com",
     "age": 20,
-    "currentCollege": "StandIn Academy"
+    "currentCollege": "Colleg Academy"
 } 
 
 ### Update a student
@@ -32,12 +34,13 @@ PUT http://localhost:3000/students/{{studentId}} HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Lucky",
+    "firstName": "Carl",
     "lastName": "Doe Updated",
-    "email": "john.doe@example.com",
+    "email": "Carl.doe@example.com",
     "age": 21,
-    "currentCollege": "BlahBlah University"
+    "currentCollege": "A College Academy"
 }
+
 
 ### Delete a student
 
