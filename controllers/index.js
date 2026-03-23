@@ -79,4 +79,6 @@ module.exports = {
   awesomeFunction,
   tooeleTechFunction,
   getAllStudents,
+  getSingleStudent,
+  createStudent,
 }
