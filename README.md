@@ -25,4 +25,4 @@ JSON syntax for reference
   "currentCollege": "Tooele Technical College"
 }  
 
-Add, edit and delete student tested and works
+Add, edit and delete student tested and works 
