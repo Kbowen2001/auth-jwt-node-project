@@ -3,7 +3,7 @@ const mongodb = require("../routes/db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const awesomeFunction = (req, res) => {
-  res.send("Hello World !!");
+  res.send("Update part3 of the API Project! /students to see student list ");
 };
 
 const tooeleTechFunction = (req, res) => {
