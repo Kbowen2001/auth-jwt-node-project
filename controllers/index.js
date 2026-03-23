@@ -1,6 +1,6 @@
 
 const mongodb = require("../routes/db/connect");
-const objectId = require("mongodb").ObjectId;
+const ObjectId = require("mongodb").ObjectId;
 
 const awesomeFunction = (req, res) => {
   res.send("Hello World !!");
@@ -82,7 +82,6 @@ const updateStudent = async (req, res) => {
     };
     const response = await mongodb
       .getDb()
-      .db()
       .collection("students")
       .updateOne({ _id: userID }, { $set: student });
     if (response.acknowledged) {
@@ -101,7 +100,6 @@ const deleteStudent = async (req, res) => {
     const userID = new ObjectId(req.params.id);
     const response = await mongodb
       .getDb()
-      .db()
       .collection("students")
       .deleteOne({ _id: userID }); 
     console.log(response);
@@ -123,4 +121,6 @@ module.exports = {
   getAllStudents,
   getSingleStudent,
   createStudent,
+  updateStudent,
+  deleteStudent,
 }
