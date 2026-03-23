@@ -10,7 +10,7 @@ GET http://localhost:3000/ HTTP/1.1
 GET http://localhost:3000/students HTTP/1.1  
 
 ### Get one student
-GET http://localhost:3000/students/644a9ff67da7 HTTP/1.1
+GET http://localhost:3000/students/ HTTP/1.1
 
 ### Create a student
 POST http://localhost:3000/students HTTP/1.1

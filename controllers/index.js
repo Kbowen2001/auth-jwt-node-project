@@ -57,7 +57,6 @@ const createStudent = async (req, res) => {
     };
     const response = await mongodb
       .getDb()
-      .db()
       .collection("students")
       .insertOne(student);
     if (response.acknowledged) {
