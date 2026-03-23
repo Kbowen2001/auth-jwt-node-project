@@ -31,9 +31,8 @@ const getSingleStudent = async (req, res) => {
     const userID = new ObjectId(req.params.id);
     const result = await mongodb
       .getDb()
-      .db()
       .collection("students")
-      .find({_id: userId});
+      .find({_id: userID});
     result.toArray().then((lists) => {
       res.setHeader("Content-Type", "application/json");
       res.status(200).json(lists[0]);
