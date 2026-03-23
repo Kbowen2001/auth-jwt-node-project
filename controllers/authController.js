@@ -1,3 +1,5 @@
+
+
 require("dotenv").config();
 const mongodb = require("../routes/db/connect");
 const User = require("../routes/models/User");
@@ -27,7 +29,7 @@ const register = async (req, res) => {
 			fullName,
 			email,
 			password: hashedPassword,
-			userType,
+			userType, 
 			createdAt: new Date(),
 		};
 
