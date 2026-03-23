@@ -24,3 +24,5 @@ JSON syntax for reference
   "age": 34,
   "currentCollege": "Tooele Technical College"
 }  
+
+Add, edit and delete student tested and works
