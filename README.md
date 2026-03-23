@@ -19,7 +19,7 @@ JSON syntax for reference
     "$oid": "69baf01cc87fd5b5646064e8"
   },
   "firstName": "John", 
-  "lastName": "Doe",
+  "lastName": "Doe", 
   "email": "jdoe@hotmail.com",
   "age": 34,
   "currentCollege": "Tooele Technical College"
