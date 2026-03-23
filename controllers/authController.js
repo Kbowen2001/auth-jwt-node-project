@@ -56,8 +56,36 @@ const register = async (req, res) => {
 	}
 };
 
-const login = (req, res) => {
-	res.send("Welcome to the login page");
+const login = async (req, res) => {
+	const { email, password } = req.body;
+	try {
+		const db = mongodb.getDb().db();
+		const user = await db.collection("users").findOne({ email });
+		if (!user) {
+			return res.status(401).json({ message: "Invalid email or password" });
+		}
+
+		const isPasswordValid = await bcrypt.compare(password, user.password);
+		if (!isPasswordValid) {
+			return res.status(401).json({ message: "Invalid email or password" });
+		}
+
+		const token = generateToken(user);
+		res.json({
+			token,
+			user: {
+				id: user._id,
+				fullName: user.fullName,
+				userType: user.userType,
+			},
+		});
+	} catch (error) {
+		console.error("Error during login:", error);
+		res.status(500).json({
+			message: "Error logging in",
+			error: error.message,
+		});
+	}
 };
 
 const logout = (req, res) => {
