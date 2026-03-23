@@ -73,7 +73,7 @@ Content-Type: application/json
 {}
 
 
-@token = <your_token_here>
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmdWxsTmFtZSI6IlRlc3QgVXNlciIsInVzZXJUeXBlIjoic3R1ZGVudCIsImlhdCI6MTc3NDI5MDU1NywiZXhwIjoxNzc0Mjk0MTU3fQ.Yj10bBD1_7_N-qU6ZTwKF3t-9DBONIJzNqnz0w2jjCw
 ### Protected route with token
 GET http://localhost:3001/auth/protected HTTP/1.1
 Authorization: Bearer {{token}}
