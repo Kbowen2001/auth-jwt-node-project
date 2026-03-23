@@ -11,7 +11,12 @@ routes.get("/ttech", myController.tooeleTechFunction);
 routes.use ("/students", require("./students"));
 
 
+//auth routes 
+routes.use("/auth", require("./auth"));
+
+
+
+
 module.exports = routes;
  
 
-//routes.get("/students", myController.getAllStudents);
