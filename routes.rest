@@ -45,3 +45,29 @@ Content-Type: application/json
 ### Delete a student
 
 DELETE http://localhost:3000/students/{{studentId}} HTTP/1.1
+
+### Register
+POST http://localhost:3001/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "fullName": "Test User",
+    "email": "test@example.com",
+    "password": "Password123!",
+    "userType": "student"
+}
+
+### Login
+POST http://localhost:3001/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test@example.com",
+    "password": "Password123!"
+}
+
+### Logout
+POST http://localhost:3001/auth/logout HTTP/1.1
+Content-Type: application/json
+
+{}
