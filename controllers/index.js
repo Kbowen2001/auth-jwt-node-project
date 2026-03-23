@@ -95,6 +95,28 @@ const updateStudent = async (req, res) => {
   }
 };
 
+//Delete One Student
+const deleteStudent = async (req, res) => {
+  try {
+    const userID = new ObjectId(req.params.id);
+    const response = await mongodb
+      .getDb()
+      .db()
+      .collection("students")
+      .deleteOne({ _id: userID }); 
+    console.log(response);
+    if (response.acknowledged) {
+      res.status(200).json(response);
+    } else {
+      res.status(500).json(response.error || "Some error occurred while deleting the student.");
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
+
+
 module.exports = {
   awesomeFunction,
   tooeleTechFunction,
