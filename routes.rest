@@ -1,4 +1,4 @@
-@studentId = 69c16ec3f8876aac5effe358
+
 
 ### get tooele tech route
 
@@ -11,7 +11,7 @@ GET http://localhost:3000/ HTTP/1.1
 ### Get all students
 GET http://localhost:3000/students HTTP/1.1  
 
-@studentId = REPLACE_WITH_REAL_ID
+@studentId = 69c17b2af8876aac5effe359
 
 ### Get one student
 GET http://localhost:3000/students/{{studentId}} HTTP/1.1
@@ -38,7 +38,7 @@ Content-Type: application/json
     "lastName": "Doe Updated",
     "email": "Carl.doe@example.com",
     "age": 21,
-    "currentCollege": "A College Academy"
+    "currentCollege": "This is to test the update function"
 }
 
 
